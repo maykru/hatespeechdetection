@@ -5,7 +5,7 @@ The model in this project is a Convolutional Neural Network used to detect hate 
 ## Preprocessing
 The data for this task consist of hate speech and non-hate speech tweets in English and Spanish. Both the original and preprocessed datasets can be found in their corresponding folders. 
 
-__Disclaimer:__ As this is a task on Hate Speech, the dataset contains many instances with this content, including racism, xenophobia and misogyny. 
+__Disclaimer:__ As this is a task on Hate Speech, the dataset contains many instances of this content, including racism, xenophobia and misogyny. 
 
 A number of preprocessing steps were taken to help improve the performance of the model: 
 
@@ -35,4 +35,8 @@ All features were normalised to a range between 0 and 1.
 
 ![diagram_model2](https://user-images.githubusercontent.com/76164630/216852293-b5571b03-0b01-421a-9b56-7a10ff8775e9.JPG)
 
-The model features four convolutional layers with four different kernel sizes 
+- GloVe embeddings were used to convert text into numerical data
+- four convolutional layers with four different kernel sizes
+- each followed by a max pooling layer 
+- outputs of all pooling layers concatenated into a 1-dimensional tensor
+- tensor fed into linear layer, which outputs result: 0 for non-hate speech, 1 for hate speech
