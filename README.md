@@ -37,6 +37,6 @@ All features were normalised to a range between 0 and 1.
 
 - GloVe embeddings were used to convert text into numerical data
 - four convolutional layers with four different kernel sizes
-- each followed by a max pooling layer 
+- each followed by a ReLU and max pooling layer 
 - outputs of all pooling layers concatenated into a 1-dimensional tensor
 - tensor fed into linear layer, which outputs result: 0 for non-hate speech, 1 for hate speech
